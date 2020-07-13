@@ -1,12 +1,12 @@
-// const { Router } = require('express')
-// const controllers = require('../controllers/products')
+const { Router } = require('express')
+const controllers = require('../controllers/posts')
 
-// const router = Router()
+const router = Router()
 
-// router.get('/products', controllers.getProducts)
-// router.get('/products/:id', controllers.getProduct)
-// router.post('/products', controllers.createProduct)
-// router.put('/products/:id', controllers.updateProduct)
-// router.delete('/products/:id', controllers.deleteProduct)
+router.get('/posts', controllers.getPosts)
+router.get('/posts/:id', controllers.getPost)
+router.post('/posts', controllers.createPost)
+router.put('/posts/:id', controllers.updatePost)
+router.delete('/posts/:id', controllers.deletePost)
 
-// module.exports = router
+module.exports = router
