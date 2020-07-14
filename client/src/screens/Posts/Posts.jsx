@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './Posts.css'
 import Post from '../../components/Post/Post'
 import Search from '../../components/Search/Search'
-import { AZ, ZA } from "../../utils/sort"
+import { AZ, ZA } from '../../utils/sorts'
 import Sort from '../../components/Sort/Sort'
 import Layout from '../../components/shared/Layout/Layout'
 import { getPosts } from '../../services/posts'
