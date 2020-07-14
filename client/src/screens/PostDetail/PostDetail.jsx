@@ -28,16 +28,16 @@ export default class PostDetail extends Component {
         const { post } = this.state
         return (
             <Layout>
-                <div>
-                    <img src={post.imgURL} />
-                    <div>
-                        <div>{product.title}</div>
-                        <div>{product.author}</div>
-                        <div>{product.content}</div>
-                        <div>{product.date}</div>
-                        <div>
-                            <button>
-                                <Link to={`/posts/${post._id}/edit`}>Edit</Link>
+                <div className='post-detail'>
+                    <img className='post-detail-img' src={post.imgURL} />
+                    <div className='detail'>
+                        <div className='title'>{product.title}</div>
+                        <div className='author'>{product.author}</div>
+                        <div className='content'>{product.content}</div>
+                        <div className='date'>{product.date}</div>
+                        <div className='button-container'>
+                            <button className='edit-button'>
+                                <Link className='edit-link' to={`/posts/${post._id}/edit`}>Edit</Link>
                             </button>
                             <button className='delete-button' onClick={() => deletePost(post._id)}>
                                 Delete
