@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
-import './ProductCreate.css'
-import Layout from '../../componets/shared/Layout/Layout'
+import './PostCreate.css'
+import Layout from '../../components/shared/Layout/Layout'
 import { Redirect } from 'react-router-dom'
-import { createProduct } from "../../services/products"
+import { createPost } from "../../services/posts"
 
-class PostCreate extends Component () {
+class PostCreate extends Component {
   constructor() {
     super()
     this.state = {
-        product: {
+        post: {
             title: '',
             author: '',
             imgURL: '',
@@ -23,7 +23,7 @@ class PostCreate extends Component () {
   handleChange = (event) => {
     const { title, value } = event.target
     this.setState({
-      product: {
+      post: {
         ...this.state.post,
         [title]: value
       }
@@ -37,7 +37,7 @@ class PostCreate extends Component () {
   }
 
   render() {
-    const { post, create } = this.state
+    const { post, created } = this.state
     
     if (created) {
       return <Redirect to={`/products`} />
@@ -48,8 +48,8 @@ class PostCreate extends Component () {
                     <input
                         className="input-name"
                         placeholder='Name'
-                        value={post.name}
-                        name='name'
+                        value={post.title}
+                        name='title'
                         required
                         autoFocus
                         onChange={this.handleChange}
