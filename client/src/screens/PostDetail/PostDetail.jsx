@@ -11,7 +11,6 @@ export default class PostDetail extends Component {
         this.state = {
             post: {
                 title: '',
-                author: '',
                 content: '',
                 imgURL: ''
             }
