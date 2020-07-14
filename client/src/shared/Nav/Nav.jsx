@@ -7,15 +7,16 @@ function Nav() {
     return (
         <nav>
             <div className="nav">
-                <NavLink className="logo" to="/">ProductsApp</NavLink>
+                <NavLink className="logo" to="/">PostApp</NavLink>
                 <div className="links">
-                    <NavLink className="link" to="/products">Products</NavLink>
-                    <NavLink className="link" to="/add-product">Add Product</NavLink>
+                    <NavLink className="link" to="/products">Posts</NavLink>
+                    <NavLink className="link" to="/add-product">Add Post</NavLink>
                 </div>
             </div>
         </nav>
     )
 
 }
+
 
 export default Nav
