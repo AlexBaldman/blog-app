@@ -29,6 +29,21 @@ export default class PostDetail extends Component {
         return (
             <Layout>
                 <div>
+                    <img src={post.imgURL} />
+                    <div>
+                        <div>{product.title}</div>
+                        <div>{product.author}</div>
+                        <div>{product.content}</div>
+                        <div>{product.date}</div>
+                        <div>
+                            <button>
+                                <Link to={`/posts/${post._id}/edit`}>Edit</Link>
+                            </button>
+                            <button className='delete-button' onClick={() => deletePost(post._id)}>
+                                Delete
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </Layout>
         )
