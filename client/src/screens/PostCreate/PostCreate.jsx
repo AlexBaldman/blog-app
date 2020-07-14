@@ -40,7 +40,7 @@ class PostCreate extends Component {
     const { post, created } = this.state
     
     if (created) {
-      return <Redirect to={`/products`} />
+      return <Redirect to={`/post`} />
     }
   return(
     <Layout>
