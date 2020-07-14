@@ -30,10 +30,10 @@ export default class PostDetail extends Component {
                 <div className='post-detail'>
                     <img className='post-detail-img' src={post.imgURL} />
                     <div className='detail'>
-                        <div className='title'>{product.title}</div>
-                        <div className='author'>{product.author}</div>
-                        <div className='content'>{product.content}</div>
-                        <div className='date'>{product.date}</div>
+                        <div className='title'>{post.title}</div>
+                        <div className='author'>{post.author}</div>
+                        <div className='content'>{post.content}</div>
+                        <div className='date'>{post.date}</div>
                         <div className='button-container'>
                             <button className='edit-button'>
                                 <Link className='edit-link' to={`/posts/${post._id}/edit`}>Edit</Link>
