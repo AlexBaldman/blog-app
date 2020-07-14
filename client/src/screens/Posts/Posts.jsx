@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './Posts.css'
 import Post from '../../components/Post/Post'
 import Search from '../../components/Search/Search'
-import { AZ, ZA, lowestFirst, highestFirst } from "../../utils/sort"
+import { AZ, ZA } from "../../utils/sort"
 import Sort from '../../components/Sort/Sort'
 import Layout from '../../components/shared/Layout/Layout'
 import { getPosts } from '../../services/posts'
@@ -45,9 +45,6 @@ class Posts extends Component {
           queriedPosts: ZA(queriedPosts)
         });
         break
-  
-      default:
-        break
     }
   }
 
@@ -61,7 +58,7 @@ class Posts extends Component {
     return (
       <Layout>
         <Search onSubmit={this.handleSubmit} onChange={this.handleSearch} />
-        {/* <Sort onSubmit={this.handleSubmit} onChange={this.handleSort} /> */}
+        <Sort onSubmit={this.handleSubmit} onChange={this.handleSort} />
         <div className="posts">
           {postsJSX}
         </div>
