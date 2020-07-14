@@ -1,0 +1,7 @@
+/***** MEDIA QUERIES *****/
+
+@media (max-width: 500px) {
+    .home {
+        padding: 100px 40px;
+    }
+}
