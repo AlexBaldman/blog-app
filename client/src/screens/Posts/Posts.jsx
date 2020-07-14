@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import './Posts.css'
 import Post from '../../components/Post/Post'
 import Search from '../../components/Search/Search'
-// import { AZ, ZA, lowestFirst, highestFirst } from "../../utils/sort"
-// import Sort from '../../components/Sort/Sort'
+import { AZ, ZA, lowestFirst, highestFirst } from "../../utils/sort"
+import Sort from '../../components/Sort/Sort'
 import Layout from '../../components/shared/Layout/Layout'
 import { getPosts } from '../../services/posts'
 
@@ -31,34 +31,25 @@ class Posts extends Component {
     this.setState({ queriedPosts }, sort)
   }
 
-  // handleSort = type => {
-  //   this.setState({ sortType: type })
-  //   const { queriedProducts } = this.state
-  //   switch (type) {
-  //     case "name-ascending":
-  //       this.setState({
-  //         queriedProducts: AZ(queriedProducts)
-  //       });
-  //       break
-  //     case "name-descending":
-  //       this.setState({
-  //         queriedProducts: ZA(queriedProducts)
-  //       });
-  //       break
-  //     case "price-ascending":
-  //       this.setState({
-  //         queriedProducts: lowestFirst(queriedProducts)
-  //       });
-  //       break
-  //     case "price-descending":
-  //       this.setState({
-  //         queriedProducts: highestFirst(queriedProducts)
-  //       });
-  //       break
-  //     default:
-  //       break
-  //   }
-  // }
+  handleSort = type => {
+    this.setState({ sortType: type })
+    const { queriedPosts } = this.state
+    switch (type) {
+      case "name-ascending":
+        this.setState({
+          queriedPosts: AZ(queriedPosts)
+        });
+        break
+      case "name-descending":
+        this.setState({
+          queriedPosts: ZA(queriedPosts)
+        });
+        break
+  
+      default:
+        break
+    }
+  }
 
   handleSubmit = event => event.preventDefault()
 
