@@ -5,7 +5,7 @@ import Layout from '../../components/shared/Layout/Layout'
 import { getPost, updatePost } from '../../services/posts'
 
 class PostEdit extends Component {
-    constuctor(props) {
+    constructor(props) {
         super(props)
         this.state = {
             post: {
